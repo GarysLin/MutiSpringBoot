@@ -1,0 +1,10 @@
+.gradle/
+.idea/
+logs/
+dist/
+gradle/
+gradlew
+gradlew.bat
+
+### VS Code ###
+.vscode/

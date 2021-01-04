@@ -1,0 +1,7 @@
+FROM microservice AS build
+
+FROM openjdk:11-jdk AS final
+ARG PROJECT_NAME
+WORKDIR /app
+COPY --from=build /gradle/dist/${PROJECT_NAME}*.jar /app/springbootapi.jar
+ENTRYPOINT ["java","-jar","springbootapi.jar"]
