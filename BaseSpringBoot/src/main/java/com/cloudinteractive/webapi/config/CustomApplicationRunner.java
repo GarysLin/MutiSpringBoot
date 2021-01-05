@@ -14,11 +14,11 @@ import java.util.List;
 
 @Slf4j
 @Component
-public class JwtApplicationRunner implements ApplicationRunner {
+public class CustomApplicationRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws SigningKeyNotFoundException {
-
+        // 專案啟動時須執行的動作
     }
 
 }

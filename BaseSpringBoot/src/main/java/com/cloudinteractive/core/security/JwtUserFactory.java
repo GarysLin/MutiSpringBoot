@@ -1,7 +1,7 @@
-package com.cloudinteractive.webapi.security;
+package com.cloudinteractive.core.security;
 
-import com.cloudinteractive.webapi.security.model.Authority;
-import com.cloudinteractive.webapi.security.model.User;
+import com.cloudinteractive.core.security.model.Authority;
+import com.cloudinteractive.core.security.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 

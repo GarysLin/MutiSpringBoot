@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.security;
+package com.cloudinteractive.core.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;

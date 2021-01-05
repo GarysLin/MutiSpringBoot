@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.config;
+package com.cloudinteractive.core.config;
 
 import com.alibaba.fastjson.JSONArray;
 import com.fasterxml.classmate.TypeResolver;
@@ -33,6 +33,15 @@ import java.util.regex.Pattern;
 @Slf4j
 @Configuration
 public class SwaggerConfig {
+    @Value("${swagger.title}")
+    private String title;
+
+    @Value("${swagger.description}")
+    private String description;
+
+    @Value("${swagger.version}")
+    private String version;
+
     @Value("${swagger.apiPackage}")
     private String apiPackage;
 
@@ -85,9 +94,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Cathay Healthcare Management BFF API with Swagger")
-                .description("Cathay Healthcare Management BFF API")
-                .version("0.0.1")
+                .title(title)
+                .description(description)
+                .version(version)
                 .build();
     }
 
@@ -122,12 +131,10 @@ public class SwaggerConfig {
                     JarEntry entry;
                     while((entry = is.getNextJarEntry()) != null) {
                         name = entry.getName();
-                        log.debug("name: " + name);
                         if (pattern.matcher(name).matches()) continue;
                         if (name.endsWith(".class")) {
                             if (name.contains(path) && name.endsWith(".class")) {
                                 String classPath = name.substring(0, entry.getName().length() - 6);
-                                log.debug("classPath: " + classPath);
                                 classPath = classPath.replaceAll("BOOT-INF/classes/", "");
                                 classPath = classPath.replaceAll("[\\|/]", ".");
                                 classes.add(Class.forName(classPath));
@@ -135,14 +142,14 @@ public class SwaggerConfig {
                         }
                     }
                 } catch (Exception ex) {
-                    // Silence is gold
+                    log.error(ex.getMessage(), ex);
                 }
             } else {
                 try {
                     List<Class<?>> subClasses = getClassesInFile(classpathEntry, packageName);
                     classes.addAll(subClasses);
                 } catch (Exception ex) {
-                    // Silence is gold
+                    log.error(ex.getMessage(), ex);
                 }
             }
         }
@@ -157,6 +164,7 @@ public class SwaggerConfig {
         List<Class<?>> classes = new ArrayList<>();
 
         File base = new File(classpathEntry + File.separatorChar + path);
+        if (base.listFiles() == null) return classes;
         for (File file : base.listFiles()) {
             String name = file.getName();
             if (pattern.matcher(name).matches()) continue;

@@ -1,7 +1,7 @@
-package com.cloudinteractive.webapi.config;
+package com.cloudinteractive.core.config;
 
-import com.cloudinteractive.webapi.security.JwtAuthenticationEntryPoint;
-import com.cloudinteractive.webapi.security.JwtAuthenticationTokenFilter;
+import com.cloudinteractive.core.security.JwtAuthenticationEntryPoint;
+import com.cloudinteractive.core.security.JwtAuthenticationTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -86,6 +86,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/test/**"
                 ).permitAll()
                 .anyRequest().authenticated();
+
 
         // Custom JWT based security filter
         httpSecurity

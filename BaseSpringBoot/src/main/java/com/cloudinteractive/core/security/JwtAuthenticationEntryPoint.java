@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.security;
+package com.cloudinteractive.core.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

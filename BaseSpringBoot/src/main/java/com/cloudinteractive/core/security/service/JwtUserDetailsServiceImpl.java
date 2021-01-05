@@ -1,9 +1,9 @@
-package com.cloudinteractive.webapi.security.service;
+package com.cloudinteractive.core.security.service;
 
-import com.cloudinteractive.webapi.security.model.AuthorityName;
-import com.cloudinteractive.webapi.security.JwtUserFactory;
-import com.cloudinteractive.webapi.security.model.Authority;
-import com.cloudinteractive.webapi.security.model.User;
+import com.cloudinteractive.core.security.JwtUserFactory;
+import com.cloudinteractive.core.security.model.Authority;
+import com.cloudinteractive.core.security.model.AuthorityName;
+import com.cloudinteractive.core.security.model.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

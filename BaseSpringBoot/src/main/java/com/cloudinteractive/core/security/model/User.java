@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.security.model;
+package com.cloudinteractive.core.security.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

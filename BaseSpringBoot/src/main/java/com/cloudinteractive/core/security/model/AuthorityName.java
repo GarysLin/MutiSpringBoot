@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.security.model;
+package com.cloudinteractive.core.security.model;
 
 public enum AuthorityName {
     ROLE_USER, ROLE_ADMIN

@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.security;
+package com.cloudinteractive.core.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi.security;
+package com.cloudinteractive.core.security;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

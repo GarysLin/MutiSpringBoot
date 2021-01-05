@@ -1,4 +1,4 @@
-package com.cloudinteractive.webapi;
+package com.cloudinteractive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
