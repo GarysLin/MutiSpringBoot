@@ -18,6 +18,8 @@ public class BaseHttpResponse {
     @Builder.Default
     @ApiModelProperty(example = "test", value = "回傳訊息")
     private String resultMessage = "";
+    @ApiModelProperty(example = "", value = "回傳內容")
+    private Object resultData;
     @Builder.Default
     @ApiModelProperty(example = "2020-08-07 14:03:07.961", value = "回傳時間")
     private String responseDatetime =  DateTimeUtil.getNowStringMs();
