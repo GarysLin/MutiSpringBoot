@@ -1,0 +1,16 @@
+plugins {
+
+}
+
+group = 'com.cloudinteractive'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+mainClassName = 'com.cloudinteractive.WebApiApplication'
+
+repositories {
+
+}
+
+dependencies {
+
+}

@@ -24,3 +24,14 @@ src
      |-- doc 各種文件資料
 
 ```
+##新模組建立流程
+1. 複製BaseSpringBoot
+2. 更改模組名稱(ex:Login)
+3. 修改模組settings.gradle的rootProject.name
+4. 專案settings.gradle設定include
+5. dockerBuild.sh增加新功能docker build DockerImage
+
+模組內application.properties中可依功能模組修改以下內容
+1. server.port
+2. swagger.title
+3. swagger.description
