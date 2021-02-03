@@ -17,7 +17,7 @@ public class JwtAuthentication {
     private String refresh_token;
     @Builder.Default
     @ApiModelProperty(example = "", value = "token_type")
-    private String token_type = "bearer";
+    private String token_type = "JWT";
     @ApiModelProperty(example = "", value = "expires_in")
     private long expires_in;
     @Builder.Default

@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile project(':BaseModule')
+//    compile project(':BaseModule')
     compile project(':AuthModule')
     compile project(':AccountModule')
 }

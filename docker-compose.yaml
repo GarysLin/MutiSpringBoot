@@ -1,0 +1,14 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: ["java","-jar","springbootapi.jar"]
+    ports:
+      - "9000:8900"
+    environment:
+      - ENV=sit
+
+volumes:
+  static-root:

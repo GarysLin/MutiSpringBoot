@@ -19,8 +19,8 @@ import java.util.List;
 @Api(tags = {"Member API"})
 public class MemberRestController extends BaseRestController {
 
-    @ApiOperation(("login"))
-    @RequestMapping(path = "/login", method = RequestMethod.GET)
+    @ApiOperation(("取得所有會員資料"))
+    @RequestMapping(path = "/all", method = RequestMethod.GET)
     @ApiResponses(value = {
             @ApiResponse(code = 200,
                     message = "resultCode(0000):成功\nresultCode(9999):失敗"),
