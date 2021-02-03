@@ -1,5 +1,6 @@
 rootProject.name = 'MicroSpringBoot'
 
-include 'BaseSpringBoot'
-include 'Login'
-//include 'Mybatis'
+include 'MultiSpringBoot'
+include 'AuthModule'
+include 'AccountModule'
+include 'BaseModule'

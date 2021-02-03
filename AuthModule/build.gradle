@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+ext.moduleName = 'com.cloodinteractive'
+
+repositories {
+
+}
+
+dependencies {
+    compile project(':BaseModule')
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
